@@ -4,7 +4,9 @@
 
 :root {
     --Dark1 : #3A3A3A;
+    --Dark2: #AAAAAA;
     --primary-color : #E02C6D;
+
 }
 
 * {
@@ -20,6 +22,31 @@
     display: flex;
 }
 
+.btn-primary
+{
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 8px;
+    padding: 10px 24px;
+    border-radius: 41px;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 6px 12px rgba(224, 44, 110, 0),
+              0 12px 24px rgba(224, 44, 110, 0);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover 
+{
+    background: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 6px 12px rgba(224, 44, 109, 0.4),
+              0 12px 24px rgba(224, 44, 109, 0.3);
+              cursor: pointer;
+}
 /* shared style end here */
 
 body {
@@ -95,6 +122,46 @@ nav {
 {
     transform: scale(1.1);
 }
+
+.banner-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    column-gap: 130px;
+}
+.banner-text h1
+{
+    color: var(--Dark1);
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.banner-container p 
+{
+    color: var(--Dark2);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.bannerimage
+{
+    display: flex;
+    background: url("../images/Circle\ design.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 475px;
+    align-items: center;
+}
+
+.bannerimage img 
+{
+    width: 410px;
+}
+
 /* the header section style end */
 
 
@@ -102,20 +169,26 @@ nav {
 
 /* for mobile view */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     nav 
     {
         flex-direction: column;
+        background-color: white;
     }
 
     .logo
     {
         width: 100%;
         position: fixed;
-        top: 20px;
+        top: 0px;
         left: 10px;
         z-index: 999;
+        background-color: white;
 
+    }
+    .logo h2
+    {
+        padding-top: 20px;
     }
     .navigation-cart
     {
@@ -127,11 +200,25 @@ nav {
 
     .navigation ul 
     {
+        column-gap: 10px;
         margin-top: 30px;
         justify-content: space-between;
     }
     .navigation ul li a 
     {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .banner-container
+    {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-text
+    {
+        justify-content: center;
+        place-items: center;
+        text-align: center;
     }
 }
