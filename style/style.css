@@ -164,6 +164,24 @@ nav {
 
 /* the header section style end */
 
+/* sponso section */
+
+.sponsor-container {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    border-top: 1px solid #564c4c20;
+    border-bottom: 1px solid #564c4c20;
+    margin-bottom: 100px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    place-items: center;
+}
+
 
 
 
