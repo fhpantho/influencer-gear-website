@@ -321,6 +321,38 @@ nav {
 {
 }
 
+footer
+{
+    background-color: #0a0826;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.social
+{
+        display: flex;
+        align-items: center;
+}
+.social img 
+{
+    width: 80px;
+    filter: invert(100%);
+    transition: all 0.3s ease-in-out;
+    
+}
+.social img:hover
+{
+
+    cursor: pointer;
+
+    filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(3000%) hue-rotate(320deg);
+}
 
 
 /* for mobile view */
@@ -346,6 +378,7 @@ nav {
         left: 10px;
         z-index: 999;
         background-color: white;
+        padding-bottom: 10px;
 
     }
     .logo h2
